@@ -1,9 +1,18 @@
 .jumbotron {
     background-color: saddlebrown;
     padding: 50px;
-    width: 92%;
+    /* width: 92%; */
     text-align: center;
     color: white;
-    margin-left: 47px;
-    margin-top: 15px;
+    margin: 10px, auto;
+}
+
+.card-header {
+    background-color: steelblue;
+    color: white;
+    font-weight: bold;
+}
+
+.card {
+    width: 100%;
 }
