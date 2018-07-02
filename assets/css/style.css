@@ -16,3 +16,11 @@
 .card {
     width: 100%;
 }
+
+.text-dark {
+    font-weight: bold;
+}
+
+.label {
+    font-weight: bold;
+}

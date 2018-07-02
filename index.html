@@ -18,25 +18,54 @@
     <div class="container">
     <div class="jumbotron">
         <h1>Anytime is Train Time</h1>
+        <h5>Toot! Toot!</h5>
     </div>
 </div>
 
     <div class="container">
     <div class="card border-primary mb-3">
-        <div class="card-header">Header</div>
-        <div class="card-body text-dark">
-          <h5 class="card-title">Primary card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
+        <div class="card-header">Current Train Schedule</div>
+          <div class="card-body">
+            <table class="table table-hover" id='employee-table'>
+              <thead>
+                <tr>
+                  <th>Train Name</th>
+                  <th>Destination</th>
+                  <th>Frequency (min)</th>
+                  <th>Next Arrival</th>
+                  <th>Minutes Away</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
       </div>
-    </div>
+      </div>
 
     <div class="container">
         <div class="card border-primary mb-3">
             <div class="card-header">Add Train</div>
             <div class="card-body text-dark">
-              <h5 class="card-title">Primary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <form>
+                    <div class="form-group row">
+                      <label for="trainName-input">Train Name</label>
+                      <input type="text" class="form-control" id="trainName-input">
+                    </div>
+                    <div class="form-group row">
+                        <label for="destination-input">Destination</label>
+                        <input type="text" class="form-control" id="destination-input">
+                    </div>
+                    <div class="form-group row">
+                        <label for="firstTrain-time-input">First Train Time (HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="firstTrain-time-input">
+                    </div>
+                    <div class="form-group row">
+                        <label for="frequency-input">Frequency (min)</label>
+                        <input type="text" class="form-control" id="frequency-input">
+                    </div>
+                    <button type="submit" id="add-trainInfo-btn" class="btn btn-primary">Submit</button>
+                  </form>
             </div>
           </div>
         </div>
@@ -49,6 +78,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+     <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+  <!-- Added Moment JS -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
     <!-- Personal JS file -->
     <script src="assets/javascript/app.js"></script>
